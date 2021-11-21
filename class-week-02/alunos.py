@@ -26,5 +26,17 @@ def main():
   if select == 'Opt2':
     st.markdown('Opt2')
 
+  st.markdown('multiselect')
+  multi = st.multiselect('Choose:', { 'Opt1', 'Opt2' })
+  if multi == 'Opt1':
+    st.markdown('Opt1')
+  if multi == 'Opt2':
+    st.markdown('Opt2')
+
+  st.markdown('File uploader')
+  file = st.file_uploader('Choose your file', type = 'csv')
+  if file is not None:
+    st.markdown('Nao esta vazio')
+
 if __name__ == '__main__':
   main()
